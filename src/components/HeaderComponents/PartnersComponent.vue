@@ -1,5 +1,7 @@
 <template>
-    <div></div>
+    <div>
+        <!-- qui metterò un v-for che ciclerà sull'array delle img dei loghi dei partner -->
+    </div>
 </template>
 
 <script>

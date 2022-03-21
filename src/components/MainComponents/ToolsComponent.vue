@@ -1,5 +1,9 @@
 <template>
-    <div></div>
+    <div>
+        <!-- componente diviso in due colonne:
+        - la prima contiene il testo
+        - la seconda contiene l'img -->
+    </div>
 </template>
 
 <script>
