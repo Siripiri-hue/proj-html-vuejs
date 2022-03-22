@@ -63,11 +63,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.col-2 {
-    p {
-        margin: 25px 0;
-    }
-}
 
 #featcard-wrapper {
     gap: 15px;

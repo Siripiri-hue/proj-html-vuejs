@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap');
 
-/* resets */
+// resets
+
 *{
     padding: 0;
     margin: 0;
@@ -20,7 +21,7 @@ a {
     text-decoration: none;
 }
 
-/* containers */
+// containers/columns
 
 .container {
     max-width: 900px;
@@ -29,15 +30,24 @@ a {
     border: 1px solid green;
 }
 
+main > section {
+    margin-bottom: 60px;
+}
+
 .col-2 {
     width: 50%;
     // border: 1px solid lightgreen;
 }
 
-/* flex rules */
+// flex rules
 
 .flex-row {
     display: flex;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
 }
 
 .just-cx {
@@ -52,7 +62,7 @@ a {
     justify-content: space-around;
 }
 
-/* button styles */
+// button styles
 
 .label {
     background-color: #E4E9F8;
@@ -82,10 +92,15 @@ button {
     border: 1px solid #2F55D4;
 }
 
-// paragraph styles
+// text styles
+
+.section-title {
+    margin: 15px 0;
+}
 
 .section-decription {
     color: #8f949b;
+    margin: 20px 0;
 }
 
 .brand {
