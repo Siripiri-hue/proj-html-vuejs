@@ -83,6 +83,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../../assets/scss/colorPalette.scss';
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -109,7 +111,7 @@ nav {
     
         button {
             background-color: #E4E9F8;
-            color: #2F55D4;
+            color: $blueBtn;
             padding: 5px 7px;
             border: none;
             border-radius: 5px;
