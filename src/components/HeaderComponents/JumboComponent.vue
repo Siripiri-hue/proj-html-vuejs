@@ -28,7 +28,7 @@ export default {
 
 <style lang="scss" scoped>
 #jumbo {
-    padding: 25px;
+    // padding: 25px;
 
     .col-2:first-child {
         #jumbo-title {

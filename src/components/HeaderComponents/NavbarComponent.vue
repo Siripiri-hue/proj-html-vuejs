@@ -87,7 +87,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
     color: #44505F;
 
     #logo {

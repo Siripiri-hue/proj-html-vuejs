@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap');
 
 /* resets */
 *{
@@ -23,8 +23,9 @@ a {
 /* containers */
 
 .container {
-    max-width: 1024px;
+    max-width: 900px;
     margin: 0 auto;
+    padding: 20px 0;
     border: 1px solid green;
 }
 
@@ -37,6 +38,10 @@ a {
 
 .flex-row {
     display: flex;
+}
+
+.just-cx {
+    justify-content: center;
 }
 
 .align-cx {
@@ -76,3 +81,15 @@ button {
     background-color: trasparent;
     border: 1px solid #2F55D4;
 }
+
+// paragraph styles
+
+.section-decription {
+    color: #8f949b;
+}
+
+.brand {
+    color: #4F6FDB;
+    font-weight: 800;
+}
+

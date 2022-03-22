@@ -1,5 +1,5 @@
 <template>
-    <ul id="partners-row" class="flex-row space-around">
+    <ul id="partners-row" class="flex-row just-cx">
         <!-- qui metterò un v-for che ciclerà sull'array delle img dei loghi dei partner -->
         <template v-for="(partner, index) in partnersLogos">
             <li :key="index">
@@ -34,7 +34,7 @@ export default {
                 }, 
                 {
                     logo: '../../assets/img/shopify.svg',
-                    link: '',
+                    link: 'https://it.shopify.com/',
                 },
                 {
                     logo: '../../assets/img/spotify.svg',
@@ -50,6 +50,7 @@ export default {
 <style lang="scss" scoped>
 
 #partners-row {
+    border-top: 2px solid #ebeef1; 
     li a {
         width: 80px;
         height: 30px;
