@@ -9,6 +9,7 @@ import { faDatabase } from '@fortawesome/free-solid-svg-icons'
 import { faJedi } from '@fortawesome/free-solid-svg-icons'
 import { faMaximize } from '@fortawesome/free-solid-svg-icons'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons'
 
 import { faCircleCheck } from '@fortawesome/free-regular-svg-icons'
 import { faUser } from '@fortawesome/free-regular-svg-icons'
@@ -17,7 +18,7 @@ import { faSquareCaretUp } from '@fortawesome/free-regular-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faStackOverflow } from '@fortawesome/free-brands-svg-icons'
 
-library.add(faMagnifyingGlass, faGithub, faStackOverflow, faUser, faSquareCaretUp, faDatabase, faJedi, faMaximize, faChevronRight, faCircleCheck )
+library.add(faMagnifyingGlass, faGithub, faStackOverflow, faUser, faSquareCaretUp, faDatabase, faJedi, faMaximize, faChevronRight, faCircleCheck, faArrowRightLong )
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
