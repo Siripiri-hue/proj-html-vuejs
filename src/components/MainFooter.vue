@@ -1,8 +1,8 @@
 <template>
-    <div class="container">
+    <footer class="container">
         <Info />
         <Copyrights />
-    </div>
+    </footer>
 </template>
 
 <script>

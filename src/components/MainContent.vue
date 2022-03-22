@@ -1,11 +1,11 @@
 <template>
-    <div class="container">
+    <main class="container">
         <Features />
         <Quickstart />
         <Tools />
         <Rates />
         <Cta />
-    </div>
+    </main>
 </template>
 
 <script>

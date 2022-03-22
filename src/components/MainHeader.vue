@@ -1,9 +1,9 @@
 <template>
-    <div class="container">
+    <header class="container">
         <Navbar />
         <Jumbo />
         <Partners />
-    </div>
+    </header>
 </template>
 
 <script>
@@ -21,5 +21,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+header {
+    background-color: #F8F9FC;
+}
 
 </style>
