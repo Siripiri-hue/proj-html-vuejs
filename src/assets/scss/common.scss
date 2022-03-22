@@ -93,14 +93,21 @@ button {
 }
 
 // text styles
+.title-wrapper-cx {
+    margin: 0 auto;
+    max-width: 60%;
+    text-align: center;
+}
 
 .section-title {
     margin: 15px 0;
+    font-size: 1.5rem;
 }
 
 .section-decription {
     color: #8f949b;
     margin: 20px 0;
+    font-size: 0.9rem;
 }
 
 .brand {
