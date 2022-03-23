@@ -1,7 +1,9 @@
 <template>
-    <footer class="container">
-        <Info />
-        <Copyrights />
+    <footer>
+        <div class="container">
+            <Info />
+            <Copyrights />
+        </div>
     </footer>
 </template>
 
@@ -18,5 +20,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+footer {
+    background-color: #202942;
+    color: white;
+}
 
 </style>
