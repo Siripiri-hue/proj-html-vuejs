@@ -59,12 +59,16 @@ main > section {
     justify-content: center;
 }
 
-.align-cx {
-    align-items: center;
-}
-
 .space-around {
     justify-content: space-around;
+}
+
+.space-btw {
+    justify-content: space-between;
+}
+
+.align-cx {
+    align-items: center;
 }
 
 // button styles
