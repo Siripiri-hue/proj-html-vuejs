@@ -26,5 +26,9 @@ export default {
 <style lang="scss" scoped>
 header {
     background-color: #F8F9FC;
+    border-bottom: 1px solid black;
+    // border-bottom-left-radius: 100px;
+    // border-bottom-right-radius: 100px;
+    border-image: 30 round;
 }
 </style>
