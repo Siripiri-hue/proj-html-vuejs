@@ -6,11 +6,11 @@
 
         <div class="col-2">
             <h2 class="section-title">Build tools and extensive documentation</h2>
-            <p class="section-decription">You can combine all the Landrick templates into a single one, you can take a component from the Application theme and use it in a website</p>
+            <p class="section-description">You can combine all the Landrick templates into a single one, you can take a component from the Application theme and use it in a website</p>
 
-            <div class="section-decription flex-col">
+            <div class="section-description flex-col">
                 <span v-for="(tool, index) in tools" :key="index">
-                    <font-awesome-icon icon="fa-regular fa-circle-check" /> {{ tool }}
+                    <font-awesome-icon icon="fa-regular fa-circle-check" class="blue-text" /> {{ tool }}
                 </span>
             </div>
 
@@ -39,4 +39,7 @@ export default {
     width: 65%;
 }
 
+span .blue-text {
+    padding-right: 5px;
+}
 </style>

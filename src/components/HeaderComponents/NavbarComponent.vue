@@ -1,22 +1,29 @@
+<!--
+Questo componente contiene la nav, la quale contiene tre blocchi, allineati con il flex e sono:
+- il logo
+- la lista dei link della navbar
+- la lista delle icone in alto a dx 
+-->
+
 <template>
     <nav>
-        <!-- questo componente contiene una row (la nav), che contiene tre blocchi, i quali sono allineati con il flex e sono:
-        - il logo
-        - la lista dei link della navbar
-        - la lista delle icone in alto a dx -->
-
         <!-- immagine del logo -->
         <figure id="logo">
             <img src="../../assets/img/logo-dark.png">
         </figure>
 
         <!-- lista di links presenti nella navbar -->
+        <!-- anziché fare un altro componente, ciclo direttamente sul codice -->
         <ul id="nav-links">
-            <template v-for="(item, index) in navList" > <!-- anziché fare un altro componente, dal momento che non verrà riutilizzato, ciclo una porzione di codice -->
-                <li :key="index"> 
-                    <a href="">{{ item }}</a>
-                </li>
-            </template>
+            <li v-for="(item, index) in navList" :key="index"
+            :class="{ active: index === activeLink }" 
+            @click="changeActiveLink(index)">
+            <!-- :class="(index === activeLink) ? 'active' : ''">  -->
+                <a href="#">
+                    {{ item }}
+                    <font-awesome-icon icon="fa-solid fa-chevron-down" v-show="(item != 'Home')" />
+                </a>
+            </li>
         </ul>
 
         <!-- icone in alto a dx -->
@@ -25,13 +32,12 @@
                 <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
             </a>
 
-            <template v-for="(item, index) in icons" > <!-- anziché fare un altro componente, dal momento che non verrà riutilizzato, ciclo una porzione di codice -->
-                <button :key="index"> 
-                    <a :href="item.link">
-                        <font-awesome-icon :icon="item.icon" />
-                    </a>
-                </button>
-            </template>
+            <!-- anziché fare un altro componente, ciclo direttamente sul codice -->
+            <button v-for="(item, index) in icons" :key="index"> 
+                <a :href="item.link">
+                    <font-awesome-icon :icon="item.icon" />
+                </a>
+            </button>
 
             <!-- <button>
                 <a href="https://github.com/">
@@ -63,6 +69,8 @@ export default {
                 "Docs"
             ],
 
+            activeLink: 0,
+
             icons: [
                 {
                     link: 'https://github.com/',
@@ -78,6 +86,12 @@ export default {
                 }
             ]
         }
+    },
+
+    methods: {
+        changeActiveLink: function(index) {
+            this.activeLink = index;
+        }
     }
 }
 </script>
@@ -89,7 +103,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #44505F;
+    color: $darkGrey;
 
     #logo {
         width: 130px;
@@ -101,6 +115,10 @@ nav {
         text-transform: uppercase;
         font-size: 10px;
         font-weight: 700;
+
+        .active {
+            color: $LandrickViolet;
+        }
     }
 
     #nav-icons {
@@ -110,7 +128,7 @@ nav {
         // font-size: 10px;
     
         button {
-            background-color: #E4E9F8;
+            background-color: $labelBkg;
             color: $blueBtn;
             padding: 5px 7px;
             border: none;
@@ -118,8 +136,6 @@ nav {
             box-shadow: 4px 4px 5px -1px rgba(106,106,106,0.88);
         }
     }
-
-
 }
 
 </style>

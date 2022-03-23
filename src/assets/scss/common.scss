@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap');
+@import 'colorPalette.scss';
 
 // resets
 
@@ -24,10 +25,10 @@ a {
 // containers/columns
 
 .container {
-    max-width: 1100px;
+    max-width: 1024px;
     margin: 0 auto;
     padding: 20px 0;
-    border: 1px solid green;
+    // border: 1px solid green;
 }
 
 main > section {
@@ -41,7 +42,7 @@ main > section {
 
 .col-4 {
     width: calc(100% / 3);
-    border: 1px solid white;
+    // border: 1px solid white;
 }
 
 // flex rules
@@ -74,12 +75,12 @@ main > section {
 // button styles
 
 .label {
-    background-color: #E4E9F8;
-    color: #6F89E1;
+    background-color: $labelBkg;
+    color: $labelText;
     border: none;
     border-radius: 50px;
-    padding: 4px 5px;
-    font-weight: 700;
+    padding: 7px 8px;
+    font-weight: 800;
     font-size: 10px;
 }
 
@@ -91,14 +92,14 @@ button {
 
 .blue-btn {
     color: white;
-    background-color: #2F55D4;
+    background-color: $blueBtn;
     border: none; 
 }
 
 .white-btn {
-    color: #2F55D4;
+    color: $blueBtn;
     background-color: trasparent;
-    border: 1px solid #2F55D4;
+    border: 1px solid $blueBtn;
 }
 
 // text styles
@@ -113,14 +114,23 @@ button {
     font-size: 1.5rem;
 }
 
-.section-decription {
-    color: #8f949b;
+.section-description {
+    color: $sectionText;
     margin: 20px 0;
     font-size: 0.9rem;
+    font-weight: 700;
 }
 
 .brand {
-    color: #4F6FDB;
+    color: $LandrickViolet;
     font-weight: 800;
+}
+
+.greenColor {
+    color: $greenDetails;
+}
+
+.blue-text {
+    color: $blueBtn;
 }
 

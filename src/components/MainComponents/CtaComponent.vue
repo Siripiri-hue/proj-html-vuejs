@@ -4,7 +4,7 @@
         la prima avrà il testo e la seconda l'input -->
 
         <h2 class="section-title">Want to be among the first to find out?</h2>
-        <p class="section-decription">Start with <span class="brand">Landrick</span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
+        <p class="section-description">Start with <span class="brand">Landrick</span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
         <form action="">
             <input type="text" placeholder="Email Address">
             <button class="blue-btn">Get Started</button>

@@ -1,3 +1,5 @@
+<!-- Questo componente raggruppa tutti i componenti che formano il main content -->
+
 <template>
     <main class="container">
         <Features />

@@ -1,31 +1,33 @@
+<!-- 
+Questo componente contiene due blocchi, così divisi:
+- il primo contiene una col centrata, il quale a suo volta contiene il titolo e il sottotitolo della section
+- il secondo contiene il riquadro dei comandi npm ecc 
+-->
+
 <template>
     <section>
-        <!-- questo componente contiene due row, così divise:
-        - la prima contiene una col centrata che contiene il titolo e il sottotitolo della section
-        - la seconda contiene il riquadro dei comandi npm ecc -->
-
         <div class="col-2">
             <h6 class="brand">Quickstart</h6>
-            <h2>Awesome, isn't it? Let's dive in!</h2>
-            <p class="section-decription">Start working with <span class="brand">Landrick</span> that can provide everything you have to generate awareness, drive traffic, connect.</p>
+            <h2 class="section-title">Awesome, isn't it? Let's dive in!</h2>
+            <p class="section-description">Start working with <span class="brand">Landrick</span> that can provide everything you have to generate awareness, drive traffic, connect.</p>
         </div>
 
         <div>
             <div id="commands-line">
                 <div id="btn-wrapper" class="flex-row just-cx">
                     <button class="btn-command" v-for="(btn, index) in commandLines" :key="index"
-                    :class="{ active: index === activeBtn }">
+                    :class="{ active: index === activeBtn }"
+                    @click="changeActiveElem(index)">
                         {{ btn }}
                     </button>
                 </div>
-                <p>$ npm install -g claps.js</p>
+                <p><span class="greenColor">$</span> npm install <span class="greenColor">-g</span> claps.js</p>
             </div>
             <div id="benefits">
-                <span><font-awesome-icon icon="fa-regular fa-circle-check" /> Organize you own data</span>
-                <span><font-awesome-icon icon="fa-regular fa-circle-check" /> Work with any team</span>
+                <span><font-awesome-icon icon="fa-regular fa-circle-check" class="greenColor"/> Organize you own data</span>
+                <span><font-awesome-icon icon="fa-regular fa-circle-check" class="greenColor"/> Work with any team</span>
             </div>
         </div>
-
     </section>
 </template>
 
@@ -36,11 +38,19 @@ export default {
             commandLines: ['npm', 'nuget', 'spm', 'github'],
             activeBtn: 0,
         }
-    }    
+    },
+
+    methods: {
+        changeActiveElem: function(index) {
+            this.activeBtn = index;
+        }
+    } 
 }
 </script>
 
 <style lang="scss" scoped>
+@import '../../assets/scss/colorPalette.scss';
+
 .col-2 {
     margin: 0 auto;
     text-align: center;
@@ -55,16 +65,16 @@ div:last-of-type {
 
     #commands-line {
         // height: 125px;
-        background-color: #3C4858;
+        background-color: $commandBkg;
         border-radius: 5px;
         padding: 15px;
 
         #btn-wrapper {
             // padding: 25px;
             // padding: 10px 0;
-            border: 1px solid #576271;
+            border: 1px solid $btnBorder;
             border-radius: 5px;
-            background-color: #4F5A69;
+            background-color: $btnBkg;
 
             .btn-command {
                 flex-grow: 1;
@@ -73,7 +83,7 @@ div:last-of-type {
                 background-color: transparent;
 
                 &.active {
-                    background-color: #3C4858;
+                    background-color: $activeBkg;
                 }
             }
         }
@@ -84,7 +94,7 @@ div:last-of-type {
     }
 
     #benefits {
-        color: #8D9AAC;
+        color: $benefitsText;
         // max-width: fit-content;
         
         span {

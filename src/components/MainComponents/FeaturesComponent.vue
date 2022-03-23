@@ -1,12 +1,14 @@
+<!-- 
+Questo componente è diviso in due blocchi:
+- il primo occupa il 50% dello spazio e contiene il titolo della sezione e relativo paragrafo 
+- il secondo è il wrapper delle card, che contiene il v-for delle features
+-->
+        
 <template>
     <section>
-        <!-- questo componente è diviso in due righe: 
-        - la prima è divisa in due colonne, di cui la prima contiene il titolo della sezione e il paragrafo, l'altra rimane vuota
-        - la seconda contiene un v-for che ciclerà le card delle features -->
-
         <div class="col-2">
             <h2 class="section-title">Key Features</h2>
-            <p class="section-decription">Start working with <span class="brand">Landrick</span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
+            <p class="section-description">Start working with <span class="brand">Landrick</span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
         </div>
 
         <div id="featcard-wrapper" class="flex-row space-around">
@@ -63,19 +65,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../../assets/scss/colorPalette.scss';
 
 #featcard-wrapper {
     gap: 15px;
 
     .features-card {
         padding: 15px;
-        border: 1px solid #F5F6F7;
+        border: 1px solid $cardBorder;
         border-radius: 5px;
 
         .icon-wrapper {
-            background-color: #EAEEFB;
+            background-color: $labelIcon;
             border: none;
-            color: #4F6FDB;
+            color: $LandrickViolet;
             padding: 3px;
             max-width: fit-content;
             font-size: 1.5rem;
@@ -89,12 +92,12 @@ export default {
         }
 
         p {
-            color: #A6B0BE;
+            color: $cardText;
             font-size: 0.90rem;
         }
 
         a {
-            color: #5877DC;
+            color: $linkColor;
 
             .fa-chevron-right {
                 font-size: 9px;

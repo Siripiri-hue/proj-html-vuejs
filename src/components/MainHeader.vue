@@ -1,3 +1,5 @@
+<!-- Questo componente raggruppa i principali componenti che formano l'header -->
+
 <template>
     <header>
         <div class="container">
@@ -5,6 +7,7 @@
             <Jumbo />
         </div>
         
+        <!-- Partners escluso dal container per poter costruire la riga che separa i partners -->
         <Partners />
     </header>
 </template>
@@ -24,11 +27,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/scss/colorPalette.scss';
+
 header {
-    background-color: #F8F9FC;
-    border-bottom: 1px solid black;
+    background-color: $headerBkg;
+    // border-bottom: 1px solid black;
     // border-bottom-left-radius: 100px;
     // border-bottom-right-radius: 100px;
-    border-image: 30 round;
+    // border-image: 30 round;
 }
 </style>

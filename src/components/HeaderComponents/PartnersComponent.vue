@@ -1,14 +1,16 @@
+<!-- 
+Questo componente contiene le icone dei partners
+-->
+
 <template>
-    <section id="partners-row" class="container">
-        <!-- v-for che cicla sull'array delle img dei loghi dei partner -->
-        <ul class="flex-row space-around">
-            <template v-for="(partner, index) in partnersLogos">
-                <li :key="index">
-                    <a :href="partner.link">
-                        <img :src="partner.logo" alt="">
-                    </a>
-                </li>
-            </template>
+    <section id="partners-row">
+        <ul class="container flex-row space-around">
+            <!-- v-for che cicla sull'array delle img dei loghi dei partner -->
+            <li v-for="(partner, index) in partnersLogos" :key="index">
+                <a :href="partner.link">
+                    <img :src="partner.logo" alt="">
+                </a>
+            </li>
         </ul>
     </section>
 </template>
@@ -50,9 +52,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../../assets/scss/colorPalette.scss';
 
 #partners-row {
-    border-top: 2px solid #ebeef1;
+    border-top: 2px solid $headerLine;
     gap: 20px;
     padding: 40px 0;
 
