@@ -22,7 +22,8 @@ export default {
 
 footer {
     background-color: $footBkg;
-    color: white;
+    color: $footText;
+    
     // position: relative;
 }
 

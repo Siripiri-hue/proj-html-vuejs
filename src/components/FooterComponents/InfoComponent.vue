@@ -10,8 +10,8 @@
             <figure id="foot-logo"><img src="../../assets/img/logo-light.png"></figure>
             <p class="foot-paragraph">Start working with Landrick can provide everything you nedd to generate awareness, drive traffic, connect.</p>
             
-            <span v-for="(icon, i) in socialList" :key="i" class="icon-wrapper">
-                <a :href="icon.link"><font-awesome-icon :icon="icon.icon" /></a>
+            <span v-for="(icon, i) in socialList" :key="i" class="icon-wrapper"  > <!--  -->
+                <a :href="icon.link"><font-awesome-icon :icon="icon.icon"  /></a>
             </span>
         </div>
 
@@ -41,7 +41,7 @@
             <h3 class="foot-title">Newsletter</h3>
             <p class="foot-paragraph">Sign up and receive the last tips via email.</p>
             <form action="">
-                <label for="newsletter">Write your email *</label>
+                <label for="newsletter">Write your email <span class="redHeart">*</span></label>
                 <font-awesome-icon id="mail-icon" icon="fa-regular fa-envelope" /> 
                 <input type="text" placeholder="Your email">
                 <button>Subscribe</button>
@@ -73,7 +73,7 @@ export default {
                 {
                     social: 'LinkedIn',
                     link: 'https://it.linkedin.com/',
-                    icon: 'fa-brands fa-linkedin',
+                    icon: 'fa-brands fa-linkedin-in',
                 },
             ],
             companyLinks: ['About us', 'Service', 'Team', 'Pricing', 'Project', 'Careers', 'Blog', 'Login'],
@@ -89,6 +89,10 @@ export default {
 #foot-info {
     gap: 10px;
 
+    h3 {
+        color: $footTitle;
+    }
+
     .foot-paragraph {
         font-size: 0.9rem;
         margin: 20px 0;
@@ -101,11 +105,18 @@ export default {
         }
 
         .icon-wrapper {
-            border: 1px solid white;
-            padding: 3px 8px;
+            border: 1px solid $footText;
+            // font-size: 0.9rem;
             border-radius: 5px;
             margin-right: 7px;
+            padding: 4px 9px;
+            aspect-ratio: 1;
         }
+
+        // --fa-border-color: $footText ;
+        // --fa-border-padding: 7px;
+        // --fa-border-radius: 5px;
+        // --fa-pull-margin: 10px;
     }
 
     #links-box, #newsletter-box {

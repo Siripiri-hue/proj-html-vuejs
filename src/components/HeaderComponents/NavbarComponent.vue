@@ -105,6 +105,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     color: $darkGrey;
+    padding: 20px 0;
 
     #logo {
         width: 130px;

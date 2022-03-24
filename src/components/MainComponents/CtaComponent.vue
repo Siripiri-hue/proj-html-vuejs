@@ -19,6 +19,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../../assets/scss/colorPalette.scss';
+
 .col-2 {
     margin: 0 auto;
     text-align: center;
@@ -41,10 +43,8 @@ export default {
             top: 50%;
             transform: translateY(-50%);
             border-radius: 25px;
+            box-shadow: 0px 4px 5px -2px $btnsShadow;
         }
     }
-    
-
-
 }
 </style>

@@ -25,9 +25,9 @@ import { faStackOverflow } from '@fortawesome/free-brands-svg-icons'
 import { faFacebookF } from '@fortawesome/free-brands-svg-icons'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 
-library.add(faMagnifyingGlass, faGithub, faStackOverflow, faUser, faSquareCaretUp, faDatabase, faJedi, faMaximize, faChevronRight, faCircleCheck, faArrowRightLong, faFacebookF, faInstagram, faTwitter, faLinkedin, faEnvelope, faHeart, faChevronDown, faGear, faArrowUp )
+library.add(faMagnifyingGlass, faGithub, faStackOverflow, faUser, faSquareCaretUp, faDatabase, faJedi, faMaximize, faChevronRight, faCircleCheck, faArrowRightLong, faFacebookF, faInstagram, faTwitter, faLinkedinIn, faEnvelope, faHeart, faChevronDown, faGear, faArrowUp )
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 

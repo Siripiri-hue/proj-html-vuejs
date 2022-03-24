@@ -8,7 +8,7 @@ Più un terzo blocco, posizionato in absolute, per la freccia "torna su"
 <template>
     <section id="copyrights">
         <div class="container flex-row space-btw align-cx">
-            <span>&#169; Landrick. Designed with <span class="redHeart"><font-awesome-icon icon="fa-solid fa-heart" /></span> by Shreethemes.</span>
+            <span id="made-by">&#169; Landrick. Designed with <span class="redHeart"><font-awesome-icon icon="fa-solid fa-heart" /></span> by Shreethemes.</span>
 
             <ul id="payment-methods" class="flex-row align-cx">
                 <li v-for="(icon, i) in paymentIcons" :key="i">
@@ -65,23 +65,31 @@ export default {
 @import '../../assets/scss/colorPalette.scss';
 
 #copyrights {
-    padding: 30px 0 10px;
+    padding: 15px 0 10px;
     position: relative;
     border-top: 1px solid #232E4A;
 
+    .container {
+        padding: 10px 0;
+    }
+    
     ul {
         gap: 5px;
 
         li {
-            max-width: 40px;
+            max-width: 30px;
         }
+    }
+
+    #made-by {
+        font-size: 0.8rem;
     }
 
     #arrow-icon {
         position: absolute;
         bottom: 35%;
         // transform: translateY(-50%);
-        right: 10px;
+        right: 20px;
         font-size: 0.8rem;
         // color: $btnText;
         background-color: $btnUpBkg;

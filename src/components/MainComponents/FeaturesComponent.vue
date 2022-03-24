@@ -13,6 +13,7 @@ Questo componente è diviso in due blocchi:
 
         <div id="featcard-wrapper" class="flex-row space-around">
             <div class="features-card" v-for="(feat, index) in features" :key="index">
+                <font-awesome-icon class="bg-icon" :icon="feat.icon" size="10x" />
                 <div class="icon-wrapper">
                     <font-awesome-icon :icon="feat.icon" />
                 </div>
@@ -74,6 +75,10 @@ export default {
         padding: 15px;
         border: 1px solid $cardBorder;
         border-radius: 5px;
+        position: relative;
+        overflow: hidden;
+        width: calc(100% / 4);
+        // flex-grow: 1;
 
         .icon-wrapper {
             background-color: $labelIcon;
@@ -105,8 +110,21 @@ export default {
             }
         }
 
+        .bg-icon {
+            color: $iconBkg;
+            position: absolute;
+            right: -20px;
+            top: 20%;
+            z-index: -1;
+            display: none;
+        }
+
         &:hover {
             transform: translateY(-10px);
+
+            .bg-icon {
+                display: block;
+            }
         }
     }
 }

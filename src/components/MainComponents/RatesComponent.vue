@@ -14,16 +14,18 @@ Il componente è diviso in due blocchi:
         <div id="card-wrapper" class="flex-row">
             <div class="card" v-for="(subscript, index) in subscriptions" :key="index">
                 <button class="label">{{ subscript.type }}</button>
-                <h3 class="section-title">{{ subscript.price }}</h3>
-                <p class="section-description">{{ subscript.rate }}</p>
-                <p class="section-description">{{ subscript.description }}</p>
-                <div class="section-description flex-col">
+                <div class="title-wrapper">
+                    <h3 class="card-title">{{ subscript.price }}</h3>
+                    <p class="card-subtitle">{{ subscript.rate }}</p>
+                </div>
+                <p class="card-details">{{ subscript.description }}</p>
+                <div class="card-description flex-col">
                     <span v-for="(benefit, index) in subscript.benefits" :key="index">
                         <font-awesome-icon icon="fa-regular fa-circle-check" /> {{ benefit }}
                     </span>
                 </div>
                 <button class="blue-btn">Buy now</button>
-                <p class="section-description">* No credit card required</p>
+                <p class="card-description">* No credit card required</p>
                 <div id="best-rate" v-show="(index ===1)">Best</div>
             </div>
         </div>
@@ -81,6 +83,33 @@ export default {
         border-radius: 10px;
         box-shadow: 0px 3px 0px 0px $cardRateShadow;
         position: relative;
+        color: $sectionText;
+        font-weight: 700;
+
+        .title-wrapper {
+            margin: 15px 0;
+        }
+
+        .card-title {
+            color: black;
+            font-size: 1.7rem;
+        }
+
+        .card-subtitle {
+            font-size: 0.8rem;
+        }
+        
+        .card-details {
+            font-size: 0.8rem;
+
+            &::after {
+                content: "";
+                display: block;
+                border-bottom: 1px solid $darkCardBorder;
+                width: 100%;
+                margin: 15px 0;
+            }
+        }
 
         .blue-btn {
             width: 100%;
