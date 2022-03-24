@@ -74,7 +74,7 @@ div:last-of-type {
             // padding: 10px 0;
             border: 1px solid $btnBorder;
             border-radius: 5px;
-            background-color: $btnBkg;
+            background-color: $btnBorder;
 
             .btn-command {
                 flex-grow: 1;

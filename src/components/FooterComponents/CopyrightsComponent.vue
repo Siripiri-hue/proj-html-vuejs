@@ -67,6 +67,7 @@ export default {
 #copyrights {
     padding: 30px 0 10px;
     position: relative;
+    border-top: 1px solid #232E4A;
 
     ul {
         gap: 5px;
