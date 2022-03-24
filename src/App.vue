@@ -31,5 +31,12 @@ export default {
   font-family: 'Nunito', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  // Header::after {
+  //   content: '';
+  //   display: block;
+  //   clip-path: ellipse(92.16% 137.62% at 50.98% -13.59%);
+  //   height: 250px;
+  // }
 }
 </style>

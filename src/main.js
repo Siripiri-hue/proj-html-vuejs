@@ -12,6 +12,7 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import { faGear } from '@fortawesome/free-solid-svg-icons'
 
 import { faCircleCheck } from '@fortawesome/free-regular-svg-icons'
 import { faUser } from '@fortawesome/free-regular-svg-icons'
@@ -25,7 +26,7 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
-library.add(faMagnifyingGlass, faGithub, faStackOverflow, faUser, faSquareCaretUp, faDatabase, faJedi, faMaximize, faChevronRight, faCircleCheck, faArrowRightLong, faFacebookF, faInstagram, faTwitter, faLinkedin, faEnvelope, faHeart, faChevronDown )
+library.add(faMagnifyingGlass, faGithub, faStackOverflow, faUser, faSquareCaretUp, faDatabase, faJedi, faMaximize, faChevronRight, faCircleCheck, faArrowRightLong, faFacebookF, faInstagram, faTwitter, faLinkedin, faEnvelope, faHeart, faChevronDown, faGear )
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 

@@ -4,7 +4,7 @@ delle colonne, una conterrà il testo e i buttons, l'altra l'immagine
 -->
 
 <template>
-    <section id="jumbo" class="flex-row align-cx">
+    <section id="jumbo" class="container flex-row align-cx">
         <!-- colonna con testo e buttons -->
         <div class="col-2">
             <button class="label">Development</button>

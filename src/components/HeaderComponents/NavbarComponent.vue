@@ -6,7 +6,7 @@ Questo componente contiene la nav, la quale contiene tre blocchi, allineati con 
 -->
 
 <template>
-    <nav>
+    <nav class="container">
         <!-- immagine del logo -->
         <figure id="logo">
             <img src="../../assets/img/logo-dark.png">
@@ -16,9 +16,10 @@ Questo componente contiene la nav, la quale contiene tre blocchi, allineati con 
         <!-- anziché fare un altro componente, ciclo direttamente sul codice -->
         <ul id="nav-links">
             <li v-for="(item, index) in navList" :key="index"
-            :class="{ active: index === activeLink }" 
+            :class="(index === activeLink) ? 'active' : ''"
             @click="changeActiveLink(index)">
-            <!-- :class="(index === activeLink) ? 'active' : ''">  -->
+            
+            <!-- :class="{ active: index === activeLink }"  -->
                 <a href="#">
                     {{ item }}
                     <font-awesome-icon icon="fa-solid fa-chevron-down" v-show="(item != 'Home')" />

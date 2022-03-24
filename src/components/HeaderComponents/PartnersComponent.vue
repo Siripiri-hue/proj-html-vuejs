@@ -57,7 +57,7 @@ export default {
 #partners-row {
     border-top: 2px solid $headerLine;
     gap: 20px;
-    padding: 40px 0;
+    padding: 40px 0 0;
 
     li {
         width: 70px;
