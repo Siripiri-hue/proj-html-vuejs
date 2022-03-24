@@ -19,14 +19,16 @@ Il componente è diviso in due blocchi:
                     <p class="card-subtitle">{{ subscript.rate }}</p>
                 </div>
                 <p class="card-details">{{ subscript.description }}</p>
-                <div class="card-description flex-col">
+                <div class="card-benefits flex-col">
                     <span v-for="(benefit, index) in subscript.benefits" :key="index">
-                        <font-awesome-icon icon="fa-regular fa-circle-check" /> {{ benefit }}
+                        <span class="blue-text"><font-awesome-icon icon="fa-regular fa-circle-check" /></span> {{ benefit }}
                     </span>
                 </div>
                 <button class="blue-btn">Buy now</button>
-                <p class="card-description">* No credit card required</p>
-                <div id="best-rate" v-show="(index ===1)">Best</div>
+                <p class="card-notes">* No credit card required</p>
+                <div class="best-rate best-rate-top-right" v-show="(index === 1)">
+                    <span>Best</span>
+                </div>
             </div>
         </div>
     </section>
@@ -72,6 +74,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '../../assets/scss/colorPalette.scss';
+@import '../../assets/scss/bestRateBand.scss';
 
 #card-wrapper {
     gap: 15px;
@@ -85,6 +88,8 @@ export default {
         position: relative;
         color: $sectionText;
         font-weight: 700;
+        // overflow: hidden;
+        font-size: 0.9rem;
 
         .title-wrapper {
             margin: 15px 0;
@@ -95,36 +100,49 @@ export default {
             font-size: 1.7rem;
         }
 
-        .card-subtitle {
-            font-size: 0.8rem;
-        }
+        // .card-subtitle, .card-details, .card-notes {
+        //     font-size: 0.8rem;
+        // }
         
-        .card-details {
-            font-size: 0.8rem;
+        .card-details::after {
+            content: "";
+            display: block;
+            border-bottom: 1px solid $darkCardBorder;
+            width: 100%;
+            margin: 15px 0;
+        }
 
-            &::after {
-                content: "";
-                display: block;
-                border-bottom: 1px solid $darkCardBorder;
-                width: 100%;
-                margin: 15px 0;
+        .card-benefits {
+            margin: 20px 0;
+
+            span{
+                margin: 5px 0;
+
+                .blue-text {
+                    margin-right: 5px;
+                }
             }
         }
 
         .blue-btn {
             width: 100%;
+            margin-bottom: 10px;
         }
 
-        #best-rate {
-            position: absolute;
-            top: 10px;
-            right: 5px;
-            background-color: $bandBkg;
-            transform: rotate(40deg);
-            color: white;
-            font-size: 0.6rem;
-            padding: 3px;
+        .card-notes {
+            font-size: 0.8rem;
         }
+
+        // #best-rate {
+        //     position: absolute;
+        //     top: 10px;
+        //     right: -45px;
+        //     background-color: $bandBkg;
+        //     transform: rotate(40deg);
+        //     color: white;
+        //     font-size: 0.6rem;
+        //     padding: 3px 60px;
+        // }
 
         &:hover {
             transform: scale(1.05);
@@ -132,6 +150,18 @@ export default {
             // box-shadow: 17px 2px 20px 0px rgba(159,159,159,0.5);
             // box-shadow: -17px 2px 20px 0px rgba(159,159,159,0.5);
         }
+
+        &::before {
+            content: "*";
+            display: block;
+            position:absolute;
+            top: 10px;
+            right: -45px;
+        }
+
+        // &::after {
+        //     content: "ciao";
+        // }
     }
 }
 </style>
