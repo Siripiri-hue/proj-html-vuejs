@@ -24,6 +24,7 @@ Il componente è diviso in due blocchi:
                 </div>
                 <button class="blue-btn">Buy now</button>
                 <p class="section-description">* No credit card required</p>
+                <div id="best-rate" v-show="(index ===1)">Best</div>
             </div>
         </div>
     </section>
@@ -79,9 +80,28 @@ export default {
         border: 1px solid $cardBorder;
         border-radius: 10px;
         box-shadow: 0px 3px 0px 0px $cardRateShadow;
+        position: relative;
 
         .blue-btn {
             width: 100%;
+        }
+
+        #best-rate {
+            position: absolute;
+            top: 10px;
+            right: 5px;
+            background-color: $bandBkg;
+            transform: rotate(40deg);
+            color: white;
+            font-size: 0.6rem;
+            padding: 3px;
+        }
+
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 3px 0px 0px $blueBtn, 17px 2px 20px -4px rgba(159,159,159,0.5), -17px 2px 20px -4px rgba(159,159,159,0.5);
+            // box-shadow: 17px 2px 20px 0px rgba(159,159,159,0.5);
+            // box-shadow: -17px 2px 20px 0px rgba(159,159,159,0.5);
         }
     }
 }

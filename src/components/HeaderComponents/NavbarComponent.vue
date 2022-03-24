@@ -135,6 +135,11 @@ nav {
             border: none;
             border-radius: 5px;
             box-shadow: 4px 4px 5px -1px rgba(106,106,106,0.88);
+
+            &:hover {
+                background-color: $blueBtn;
+                color: white;
+            }
         }
     }
 }

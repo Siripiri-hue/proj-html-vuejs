@@ -104,6 +104,10 @@ export default {
                 vertical-align: middle;
             }
         }
+
+        &:hover {
+            transform: translateY(-10px);
+        }
     }
 }
 </style>

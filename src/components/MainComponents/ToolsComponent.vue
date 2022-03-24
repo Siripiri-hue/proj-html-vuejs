@@ -35,11 +35,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../../assets/scss/colorPalette.scss';
+
 .section-title {
     width: 65%;
 }
 
 span .blue-text {
     padding-right: 5px;
+}
+
+// hover button
+button:hover {
+    box-shadow: 0px 4px 5px -2px $btnsShadow;
 }
 </style>
