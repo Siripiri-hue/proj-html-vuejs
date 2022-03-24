@@ -113,9 +113,9 @@ nav {
 
     #nav-links {
         display: flex;
-        gap: 20px;
+        gap: 25px;
         text-transform: uppercase;
-        font-size: 10px;
+        font-size: 0.75rem;
         font-weight: 700;
 
         .active {
@@ -125,14 +125,14 @@ nav {
 
     #nav-icons {
         display: flex;
-        gap: 7px;
+        gap: 10px;
         align-items: center;
         // font-size: 10px;
     
         button {
             background-color: $labelBkg;
             color: $blueBtn;
-            padding: 5px 7px;
+            padding: 7px 10px;
             border: none;
             border-radius: 5px;
             box-shadow: 4px 4px 5px -1px rgba(106,106,106,0.88);

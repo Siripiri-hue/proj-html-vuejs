@@ -1,10 +1,12 @@
+<!-- 
+Componente diviso in tre parti
+- 1: logo, descrizione e icone social
+- 2: liste di links, che prendono ognuna la metà dello spazio
+- 3: input per sottoscrizione alla newsletter 
+-->
+
 <template>
     <section id="foot-info" class="container flex-row">
-        <!-- componente che conterrà quattro colonne
-        - col 1: logo e icone social
-        - col 2 - col 3: liste di links (probabilmente ciclate da altro componente)
-        -col 4: input per sottoscrizione alla newsletter -->
-
         <!-- logo e social media icons -->
         <div id="social-box" class="col-4">
             <figure id="foot-logo"><img src="../../assets/img/logo-light.png"></figure>
@@ -41,9 +43,11 @@
             <h3 class="foot-title">Newsletter</h3>
             <p class="foot-paragraph">Sign up and receive the last tips via email.</p>
             <form action="">
-                <label for="newsletter">Write your email <span class="redHeart">*</span></label>
-                <font-awesome-icon id="mail-icon" icon="fa-regular fa-envelope" /> 
-                <input type="text" placeholder="Your email">
+                <label for="newsletter">Write your email <span class="redHeart">*</span></label> 
+                <div id="input-wrapper">
+                    <input type="text" placeholder="Your email"> 
+                    <font-awesome-icon id="mail-icon" icon="fa-regular fa-envelope" />
+                </div>
                 <button>Subscribe</button>
             </form>
         </div>
@@ -144,7 +148,6 @@ export default {
     #newsletter-box {
 
         form {
-            position: relative;
 
             label {
                 font-size: 0.8rem;
@@ -156,19 +159,26 @@ export default {
                 // background-color: transparent;
             }
 
-            input {
-                background-color: $inputBkg;
-                padding: 10px;
-                border-radius: 7px;
-                padding-left: 40px;
-                border: none;
-            }
+            #input-wrapper {
+                position: relative;
 
-            #mail-icon {
-                position: absolute;
-                left: 3%;
-                top: 30%;
-                font-size: 20px;   
+                input {
+                    background-color: $inputBkg;
+                    padding: 10px;
+                    border-radius: 7px;
+                    padding-left: 40px;
+                    border: none;
+                    color: white;
+                    // position: relative;
+                }
+
+                #mail-icon {
+                    position: absolute;
+                    left: 3%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    font-size: 20px;   
+                }
             }
 
             button {

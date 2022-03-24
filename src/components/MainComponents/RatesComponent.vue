@@ -76,8 +76,19 @@ export default {
 @import '../../assets/scss/colorPalette.scss';
 @import '../../assets/scss/bestRateBand.scss';
 
+.title-wrapper-cx {
+    margin: 0 auto 60px;
+    max-width: 60%;
+    text-align: center;
+}
+
+#rates {
+    margin-bottom: 80px;
+}
+
 #card-wrapper {
     gap: 15px;
+    margin-bottom: 20px;
 
     .card {
         // gap: 20px;

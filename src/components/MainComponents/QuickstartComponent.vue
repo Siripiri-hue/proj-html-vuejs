@@ -52,7 +52,7 @@ export default {
 @import '../../assets/scss/colorPalette.scss';
 
 .col-2 {
-    margin: 0 auto;
+    margin: 0 auto 60px;
     text-align: center;
 }
 

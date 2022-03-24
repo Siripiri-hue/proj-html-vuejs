@@ -68,6 +68,10 @@ export default {
 <style lang="scss" scoped>
 @import '../../assets/scss/colorPalette.scss';
 
+.col-2 {
+    margin-bottom: 60px;
+}
+
 #featcard-wrapper {
     gap: 15px;
 

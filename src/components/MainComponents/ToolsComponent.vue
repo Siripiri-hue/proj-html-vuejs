@@ -49,4 +49,9 @@ span .blue-text {
 button:hover {
     box-shadow: 0px 4px 5px -2px $btnsShadow;
 }
+
+.col-2:last-child {
+    padding: 40px;
+}
+
 </style>
