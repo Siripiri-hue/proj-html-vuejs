@@ -162,17 +162,17 @@ export default {
             // box-shadow: -17px 2px 20px 0px rgba(159,159,159,0.5);
         }
 
-        &::before {
-            content: "*";
-            display: block;
-            position:absolute;
-            top: 10px;
-            right: -45px;
+        // &::before {
+        //     content: "*";
+        //     display: block;
+        //     position:absolute;
+        //     top: 10px;
+        //     right: -45px;
         }
 
         // &::after {
         //     content: "ciao";
         // }
-    }
+    // }
 }
 </style>
