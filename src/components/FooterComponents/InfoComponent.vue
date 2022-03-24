@@ -1,5 +1,5 @@
 <template>
-    <section id="foot-info" class="flex-row">
+    <section id="foot-info" class="container flex-row">
         <!-- componente che conterrà quattro colonne
         - col 1: logo e icone social
         - col 2 - col 3: liste di links (probabilmente ciclate da altro componente)
@@ -84,6 +84,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../../assets/scss/colorPalette.scss';
+
 #foot-info {
     gap: 10px;
 
@@ -144,7 +146,7 @@ export default {
             }
 
             input {
-                background-color: #27314F;
+                background-color: $inputBkg;
                 padding: 10px;
                 border-radius: 7px;
                 padding-left: 40px;
@@ -159,10 +161,10 @@ export default {
             }
 
             button {
-                background-color: #222E51;
+                background-color: $btnBkg;
                 border: none;
-                color: #2C4EBE;
-                box-shadow: 0px 4px 5px -2px rgba(44,78,190,0.65);
+                color: $btnText;
+                box-shadow: 0px 4px 5px -2px $btnsShadow;
             }
         }
     }

@@ -1,9 +1,7 @@
 <template>
     <footer>
-        <div class="container">
-            <Info />
-            <Copyrights />
-        </div>
+        <Info />
+        <Copyrights />
     </footer>
 </template>
 
@@ -20,10 +18,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/scss/colorPalette.scss';
 
 footer {
-    background-color: #202942;
+    background-color: $footBkg;
     color: white;
+    // position: relative;
 }
 
 </style>

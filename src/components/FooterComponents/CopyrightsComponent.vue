@@ -1,16 +1,27 @@
+<!--
+Componente diviso in due blocchi, divisi dallo space between:
+- il primo contiene il "made with"
+- il secondo contiene le icone dei metodi di pagamento possibili 
+Più un terzo blocco, posizionato in absolute, per la freccia "torna su"
+-->
+
 <template>
-    <section id="copyrights" class="flex-row space-btw align-cx">
-        <!-- componente diviso in due colonne:
-        - la prima che contiene il "made with"
-        - la seconda contiene le icone dei metodi di pagamento possibili -->
+    <section id="copyrights">
+        <div class="container flex-row space-btw align-cx">
+            <span>&#169; Landrick. Designed with <span class="redHeart"><font-awesome-icon icon="fa-solid fa-heart" /></span> by Shreethemes.</span>
 
-        <span>&#169; Landrick. Designed with <font-awesome-icon icon="fa-solid fa-heart" /> by Shreethemes.</span>
+            <ul id="payment-methods" class="flex-row align-cx">
+                <li v-for="(icon, i) in paymentIcons" :key="i">
+                    <a :href="icon.link"><img :src="icon.src" alt=""></a>
+                </li>
+            </ul>
+        </div>
 
-        <ul id="payment-methods" class="flex-row align-cx">
-            <li v-for="(icon, i) in paymentIcons" :key="i">
-                <a :href="icon.link"><img :src="icon.src" alt=""></a>
-            </li>
-        </ul>
+        <div id="arrow-icon">
+            <a href="#">
+                <font-awesome-icon icon="fa-solid fa-arrow-up" />
+            </a>
+        </div>
     </section>
 </template>
 
@@ -51,8 +62,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../../assets/scss/colorPalette.scss';
+
 #copyrights {
     padding: 30px 0 10px;
+    position: relative;
 
     ul {
         gap: 5px;
@@ -61,5 +75,20 @@ export default {
             max-width: 40px;
         }
     }
+
+    #arrow-icon {
+        position: absolute;
+        bottom: 35%;
+        // transform: translateY(-50%);
+        right: 10px;
+        font-size: 0.8rem;
+        // color: $btnText;
+        background-color: $btnUpBkg;
+        box-shadow: 0px 4px 5px -2px $btnsShadow;
+        padding: 3px 7px;
+        border-radius: 5px;
+    }
 }
+
+
 </style>
